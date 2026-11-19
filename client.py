@@ -6,4 +6,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
     parola=input("Inserisci la parola da trasformare")
     client.sendall(parola.encode())
     risposta = client.recv(1024)
-    print("Trasformata ricevuta dal server")
+    print("Trasformata ricevuta dal server",risposta.decode())
