@@ -1,26 +1,40 @@
+
 def BWT(parola):
 
     arrParola = list(parola)
     arrFinale = []
+
     arrParola.append("$")
 
     for i in range(0, len(arrParola)):
 
-        arrFinale.append("", join(arrParola))
-        arrParola.insert(len(arrParola),arrParola[0])
+        arrFinale.append(arrParola.copy())
+
+        arrParola.append(arrParola[0])
         arrParola.pop(0)
 
-        print(arrFinale)
-        lunghezza = len(arrParola) - 1
+    arrFinale.sort()
 
-        print()
-        trasformata = ""
-        for i in range(0, len(arrFinale)):
+    print("Matrice ordinata:")
 
-            trasformata = trasformata+ arrFinale[i][lunghezza]
-            return trasformata
+    for riga in arrFinale:
+        print(riga)
 
-    if __name__ == "_main_":
+    lunghezza = len(arrParola) - 1
 
-        parola = input("Dimmi la parola di cui vuoi sapere la trasformata di Burrows Wheeler: ")
-        BWT(parola)
+    trasformata = ""
+
+    for i in range(0, len(arrFinale)):
+
+        trasformata = trasformata + arrFinale[i][lunghezza]
+
+    return trasformata
+
+
+if __name__ == "__main__":
+
+    parola = input("Dimmi la parola di cui vuoi sapere la trasformata di Burrows Wheeler: ")
+
+    risultato = BWT(parola)
+
+    print("La trasformata è:", risultato)
