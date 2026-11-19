@@ -1,5 +1,5 @@
 
-def BWT(parola):
+def bwt(parola):
 
     arrParola = list(parola)
     arrFinale = []
@@ -35,6 +35,6 @@ if __name__ == "__main__":
 
     parola = input("Dimmi la parola di cui vuoi sapere la trasformata di Burrows Wheeler: ")
 
-    risultato = BWT(parola)
+    risultato = bwt(parola)
 
     print("La trasformata è:", risultato)

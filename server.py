@@ -1,5 +1,5 @@
 import socket
-from BWT import BWT
+from bwt import bwt
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
 
@@ -15,7 +15,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
         print("Client connesso:", addr)
         messaggio = conn.recv(1024).decode()
         print("Parola ricevuta:", messaggio)
-        risultato = BWT(messaggio)
+        risultato = bwt(messaggio)
         print("Trasformata BWT:", risultato)
 
         conn.sendall(risultato.encode())
