@@ -1,6 +1,6 @@
 # bwt panzera
 ## Trasformata di Burrows-Wheeler (BWT)
-La BWT è un algoritmo che permette di cambiare l'ordine dei caratteri di una parola.
+La BWT e' un algoritmo che permette di cambiare l'ordine dei caratteri di una parola.
 
 Il programma funziona in questo modo:
 
@@ -20,7 +20,7 @@ Risultato:
 annb$aa
 
 Scopo del progetto
-Lo scopo è creare un programma in Python che calcola la BWT. Inoltre, il progetto permette di inviare una parola da un client a un server tramite socket TCP. Il server calcola la trasformata e restituisce il risultato al client.
+Lo scopo e' creare un programma in Python che calcola la BWT. Inoltre, il progetto permette di inviare una parola da un client a un server tramite socket TCP. Il server calcola la trasformata e restituisce il risultato al client.
 
 
 
